@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<!-- 这里一定注意创建条件判断时,输完 if 选择完整的 if 标签-->
+{% if post %}
+    <h1>{{ post.title }}</h1>
+    <div>
+        <span>分类：{{ post.category.name }}</span>
+        <span>作者：{{ post.owner.username }}</span>
+    </div>
+    <hr/>
+    <p>
+        {{ post.content }}
+    </p>
+{% endif %}
+</body>
+</html>
